@@ -3,7 +3,7 @@
  */
 
 import { IMessageQueue } from './IMessageQueue.js';
-import { IRedisPub } from './IRedisPub';
+import { IRedisPub } from './IRedisPub.js';
 
 /**
  * Enumeration of LOG severities.
