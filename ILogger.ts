@@ -3,6 +3,7 @@
  */
 
 import { IMessageQueue } from './IMessageQueue.js';
+import { IRedisPub } from './IRedisPub';
 
 /**
  * Enumeration of LOG severities.
@@ -22,6 +23,12 @@ export interface ILogger {
    * @param { IMessageQueue } mq_broker The message queue broker to use from now on.
    */
   set_mq_broker( mq_broker: IMessageQueue ): void;
+
+  /**
+   * Sets a new Redis Pub client.
+   * @param { IRedisPub } redis_pub The Redis Pub client to use from now on.
+   */
+  set_redis_pub_client( redis_pub: IRedisPub ): void;
 
   /**
    * Formats a log message by prefixing it with date/time and client ID.
