@@ -44,9 +44,15 @@ export interface ILogger {
    *
    * @param { string }        msg        Message to log.
    * @param { number|string } code       A numeric error code. If string is passed, code will be looked up from the Redis client.
+   *                                     Set as optional parameter here, since it will be pre-set to a general default value
+   *                                     in the actual implementation.
    * @param { string }        severity   Log severity - on of the LOG_SEVERITIES enum, @see { Analysis.LOG_SEVERITIES }
+   *                                     Set as optional parameter here, since it will be pre-set to a general default value
+   *                                     in the actual implementation.
    * @param { Object }        extra_data Any extra data to be passed to the message.
+   *                                     Set as optional parameter here, since it will be pre-set to a general default value
+   *                                     in the actual implementation.
    */
-  log_msg( msg: string, code: number|string, severity: string, extra_data: Object ): Promise<void>;
+  log_msg( msg: string, code?: number|string, severity?: string, extra_data?: Object ): Promise<void>;
 
 }
