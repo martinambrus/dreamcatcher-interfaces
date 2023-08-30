@@ -2,7 +2,7 @@
  * Interface for log handling classes.
  */
 
-import { IMessageQueue } from './IMessageQueue';
+import { IMessageQueue } from './IMessageQueue.js';
 
 /**
  * Enumeration of LOG severities.
