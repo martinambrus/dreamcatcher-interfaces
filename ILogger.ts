@@ -23,4 +23,13 @@ export interface ILogger {
    */
   set_mq_broker( mq_broker: IMessageQueue ): void;
 
+  /**
+   * Formats a log message by prefixing it with date/time and client ID.
+   *
+   * @param { string } msg Message to format for logging purposes.
+   *
+   * @return { string } Returns a correctly formatted log message.
+   */
+  format(msg: string): string;
+
 }
