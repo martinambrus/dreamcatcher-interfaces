@@ -39,4 +39,14 @@ export interface ILogger {
    */
   format(msg: string): string;
 
+  /**
+   * Logs message into the message queue log.
+   *
+   * @param { string }        msg        Message to log.
+   * @param { number|string } code       A numeric error code. If string is passed, code will be looked up from the Redis client.
+   * @param { string }        severity   Log severity - on of the LOG_SEVERITIES enum, @see { Analysis.LOG_SEVERITIES }
+   * @param { Object }        extra_data Any extra data to be passed to the message.
+   */
+  log_msg( msg: string, code: number|string, severity: string, extra_data: Object ): Promise<void>;
+
 }
