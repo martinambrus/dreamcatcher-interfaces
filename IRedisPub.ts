@@ -1,3 +1,6 @@
+/**
+ * Interface for Redis publishing client.
+ */
 export interface IRedisPub {
 
   /**

@@ -1,3 +1,6 @@
+/**
+ * Interface for Redis subscribing client.
+ */
 export interface IRedisSub {
 
   /**
