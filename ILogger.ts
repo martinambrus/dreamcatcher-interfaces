@@ -12,7 +12,7 @@ export enum LOG_SEVERITIES {
 
   LOG_SEVERITY_ERROR = 'error',
   LOG_SEVERITY_LOG = 'log',
-  LOG_SEVERIRY_NOTICE = 'notice',
+  LOG_SEVERITY_NOTICE = 'notice',
 
 }
 
