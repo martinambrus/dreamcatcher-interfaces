@@ -21,3 +21,10 @@ jobs:
           token: ${{ secrets.SYNC_REPOS_TOKEN }}
           repository: martinambrus/dreamcatcher-keystore
           event-type: sync-interfaces
+
+      - name: Dispatch sync to dreamcatcher_utils (Search Interfaces)
+        uses: peter-evans/repository-dispatch@v3
+        with:
+          token: ${{ secrets.SYNC_REPOS_TOKEN }}
+          repository: martinambrus/dreamcatcher_utils
+          event-type: sync-search-interfaces
