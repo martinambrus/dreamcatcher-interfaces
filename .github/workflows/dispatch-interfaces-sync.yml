@@ -1,0 +1,23 @@
+name: Dispatch Interfaces Sync
+
+on:
+  push:
+    branches: ["main"]
+
+jobs:
+  dispatch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Dispatch sync to dreamcatcher-db
+        uses: peter-evans/repository-dispatch@v3
+        with:
+          token: ${{ secrets.SYNC_REPOS_TOKEN }}
+          repository: martinambrus/dreamcatcher-db
+          event-type: sync-interfaces
+
+      - name: Dispatch sync to dreamcatcher-keystore
+        uses: peter-evans/repository-dispatch@v3
+        with:
+          token: ${{ secrets.SYNC_REPOS_TOKEN }}
+          repository: martinambrus/dreamcatcher-keystore
+          event-type: sync-interfaces
